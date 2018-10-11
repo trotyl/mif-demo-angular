@@ -1,0 +1,33 @@
+{
+  "name": "mif-demo-angular",
+  "version": "0.0.1",
+  "main": "./bundles/demo-angular.umd.js",
+  "repository": "https://github.com/trotyl/mif-demo-angular.git",
+  "author": "Trotyl Yu <trotyl@qq.com>",
+  "license": "MIT",
+  "private": true,
+  "types": "./esm5/index.d.ts",
+  "scripts": {
+    "build": "yarn build:ngc && yarn build:rollup && yarn build:rollup-imports",
+    "build:ngc": "ngc -p tsconfig.json",
+    "build:rollup": "rollup -c rollup.config.js",
+    "build:rollup-imports": "rollup -c rollup-imports.config.js"
+  },
+  "dependencies": {
+    "@angular/core": "^6.1.10",
+    "moment": "^2.22.2",
+    "rxjs": "^6.3.3",
+    "tslib": "^1.9.3"
+  },
+  "devDependencies": {
+    "@angular/compiler": "^6.1.10",
+    "@angular/compiler-cli": "^6.1.10",
+    "magic-string": "^0.25.1",
+    "rollup": "^0.66.6",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "typescript": "^3.1.2"
+  },
+  "peerDependencies": {
+    "zone.js": "^0.8.26"
+  }
+}

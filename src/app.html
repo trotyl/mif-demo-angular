@@ -1,0 +1,18 @@
+<h1 id="store">The Model Store</h1>
+<div class="blue-basket" id="basket"></div>
+<div id="image">
+  <div>
+    <img [src]="activeVariant.image" [alt]="variantName">
+  </div>
+</div>
+<h2 id="name">{{product.name}}&ngsp;<small>{{activeVariant.name}}</small></h2>
+<div id="options">
+  <button *ngFor="let variant of product.variants"
+          [class.active]="variant === activeVariant"
+          type="button"
+          (click)="chooseOption(variant)">
+    <img [src]="variant.thumb" [alt]="variant.name">
+  </button>
+</div>
+<div class="blue-buy" id="buy"></div>
+<div class="green-recos" id="reco"></div>
